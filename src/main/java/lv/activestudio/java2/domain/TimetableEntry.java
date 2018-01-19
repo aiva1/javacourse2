@@ -4,7 +4,7 @@ import java.time.LocalTime;
 
 public class TimetableEntry {
 
-    private Long classId; //TODO: Class Object?
+    private Long classId; //TODO: TrainingClass Object?
     private Long roomId;  //TODO: Room Object?
     private int datOfWeek; //TODO: try using ChoiceFormat to format the day of the week
     private LocalTime startTime;

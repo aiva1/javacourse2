@@ -1,15 +1,15 @@
 package lv.activestudio.java2.domain;
 
-public class Class {
+public class TrainingClass {
 
     private Long id;
     private String name;
     private String description;
-    private Teacher teacher;
+    private Teacher teacher; //TODO: or String teacherName ?
 
     @Override
     public String toString() {
-        return "Class{" +
+        return "TrainingClass{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
