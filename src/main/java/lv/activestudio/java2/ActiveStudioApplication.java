@@ -2,13 +2,16 @@ package lv.activestudio.java2;
 
 import lv.activestudio.java2.businesslogic.AddRoomService;
 import lv.activestudio.java2.businesslogic.ListRoomService;
+import lv.activestudio.java2.businesslogic.RemoveRoomService;
 import lv.activestudio.java2.businesslogic.impl.add.AddRoomServiceImpl;
 import lv.activestudio.java2.businesslogic.impl.list.ListRoomServiceImpl;
+import lv.activestudio.java2.businesslogic.impl.remove.RemoveRoomServiceImpl;
 import lv.activestudio.java2.database.dao.RoomDAO;
 import lv.activestudio.java2.database.jdbc.RoomDAOImpl;
 import lv.activestudio.java2.ui.View;
 import lv.activestudio.java2.ui.impl.AddRoomView;
 import lv.activestudio.java2.ui.impl.ListRoomsView;
+import lv.activestudio.java2.ui.impl.RemoveRoomView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,10 +29,12 @@ public class ActiveStudioApplication {
 
         AddRoomService addRoomService = new AddRoomServiceImpl(roomDAO);
         ListRoomService listRoomService = new ListRoomServiceImpl(roomDAO);
+        RemoveRoomService removeRoomService = new RemoveRoomServiceImpl(roomDAO);
 
         Map<Integer, View> commands = new HashMap<>();
         commands.put(1, new AddRoomView(addRoomService));
         commands.put(2, new ListRoomsView(listRoomService));
+        commands.put(11, new RemoveRoomView(removeRoomService));
 
         while (true) {
             printProgramMenu();
