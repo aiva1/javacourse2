@@ -1,5 +1,19 @@
 package lv.activestudio.java2;
 
+import lv.activestudio.java2.businesslogic.AddRoomService;
+import lv.activestudio.java2.businesslogic.ListRoomService;
+import lv.activestudio.java2.businesslogic.impl.add.AddRoomServiceImpl;
+import lv.activestudio.java2.businesslogic.impl.list.ListRoomServiceImpl;
+import lv.activestudio.java2.database.dao.RoomDAO;
+import lv.activestudio.java2.database.jdbc.RoomDAOImpl;
+import lv.activestudio.java2.ui.View;
+import lv.activestudio.java2.ui.impl.AddRoomView;
+import lv.activestudio.java2.ui.impl.ListRoomsView;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 public class ActiveStudioApplication {
 
     public static void main(String[] args) {
@@ -8,7 +22,31 @@ public class ActiveStudioApplication {
         //1.
         //2.
 
+        RoomDAO roomDAO = new RoomDAOImpl();
 
+        AddRoomService addRoomService = new AddRoomServiceImpl(roomDAO);
+        ListRoomService listRoomService = new ListRoomServiceImpl(roomDAO);
+
+        Map<Integer, View> commands = new HashMap<>();
+        commands.put(1, new AddRoomView(addRoomService));
+        commands.put(2, new ListRoomsView(listRoomService));
+
+        while (true) {
+            printProgramMenu();
+            int menuItem = getFromUserMenuItemToExecute();
+            if (menuItem == 99){
+                break;
+            }
+
+            View view = commands.get(menuItem);
+            view.execute();
+        }
+    }
+
+    private static int getFromUserMenuItemToExecute() {
+        System.out.print("Please enter menu item number to execute:");
+        Scanner sc = new Scanner(System.in);
+        return Integer.parseInt(sc.nextLine());
     }
 
     private static void printProgramMenu() {

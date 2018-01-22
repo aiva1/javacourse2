@@ -16,4 +16,7 @@ public interface RoomDAO {
     void delete(Room room);
 
     List<Room> getAll();
+
+
+
 }

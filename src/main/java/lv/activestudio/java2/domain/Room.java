@@ -19,7 +19,6 @@ public class Room {
 
     //TODO: override hashCode and equals
 
-
     public void setId(Long id) {
         this.id = id;
     }
