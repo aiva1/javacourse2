@@ -1,10 +1,10 @@
 package lv.activestudio.java2.businesslogic.api.add;
 
-public class AddClassResponse {
+public class AddTrainingClassResponse {
 
     private boolean success;
 
-    public AddClassResponse(boolean isSuccess) {
+    public AddTrainingClassResponse(boolean isSuccess) {
         this.success = isSuccess;
     }
 

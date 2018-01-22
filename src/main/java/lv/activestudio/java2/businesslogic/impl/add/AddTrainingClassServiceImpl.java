@@ -1,22 +1,22 @@
 package lv.activestudio.java2.businesslogic.impl.add;
 
-import lv.activestudio.java2.businesslogic.AddClassService;
-import lv.activestudio.java2.businesslogic.api.add.AddClassRequest;
-import lv.activestudio.java2.businesslogic.api.add.AddClassResponse;
+import lv.activestudio.java2.businesslogic.AddTrainingClassService;
+import lv.activestudio.java2.businesslogic.api.add.AddTrainingClassRequest;
+import lv.activestudio.java2.businesslogic.api.add.AddTrainingClassResponse;
 import lv.activestudio.java2.database.dao.TrainingClassDAO;
 import lv.activestudio.java2.domain.TrainingClass;
 import org.apache.log4j.Logger;
 
-public class AddClassServiceImpl implements AddClassService {
+public class AddTrainingClassServiceImpl implements AddTrainingClassService {
 
     TrainingClassDAO trainingClassDAO;
 
-    public AddClassServiceImpl(TrainingClassDAO trainingClassDAO) {
+    public AddTrainingClassServiceImpl(TrainingClassDAO trainingClassDAO) {
         this.trainingClassDAO = trainingClassDAO;
     }
 
     @Override
-    public AddClassResponse addClass(AddClassRequest request) {
+    public AddTrainingClassResponse addClass(AddTrainingClassRequest request) {
 
         TrainingClass trainingClass = new TrainingClass();
         trainingClass.setName(request.getName());
@@ -24,6 +24,6 @@ public class AddClassServiceImpl implements AddClassService {
         trainingClass.setTeacher(request.getTeacher());
         trainingClassDAO.save(trainingClass);
         Logger.getRootLogger().debug("Training class is stored to db via training class DAO");
-        return new AddClassResponse(true);
+        return new AddTrainingClassResponse(true);
     }
 }

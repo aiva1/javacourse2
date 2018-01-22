@@ -1,4 +1,4 @@
-package lv.activestudio.java2.database.jdbc;
+package lv.activestudio.java2.database.orm;
 
 import lv.activestudio.java2.database.dao.RoomDAO;
 import lv.activestudio.java2.domain.Room;
