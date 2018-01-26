@@ -12,5 +12,6 @@
   </head>
   <body>
   $END$
+  Welcome, app server is running
   </body>
 </html>

@@ -21,8 +21,8 @@ public class AddTeacherServiceImpl implements AddTeacherService {
         teacher.setFirstName(request.getFirstName());
         teacher.setLastName(request.getLastName());
         teacher.setBio(request.getBio());
+        teacher.setPhoto(request.getPhoto());
         teacherDAO.save(teacher);
-        Logger.getRootLogger().debug("New teacher is saved to db via DAO");
         return new AddTeacherResponse(true);
     }
 }
