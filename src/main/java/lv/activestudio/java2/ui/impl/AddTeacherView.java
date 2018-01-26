@@ -19,7 +19,7 @@ public class AddTeacherView implements View {
         Logger.getRootLogger().debug("Executing AddTeacherView - adding new Teacher(Kate, Billing, bio)");
 
         //business logic
-        addTeacherService.addTeacher(new AddTeacherRequest("Kate", "Billing", "Kate's biography"));
+        addTeacherService.addTeacher(new AddTeacherRequest("Kate", "Billing", "Kate's biography", "linkToPhoto"));
         //end of BL
 
         Logger.getRootLogger().debug("Executing AddTeacherView finished");
