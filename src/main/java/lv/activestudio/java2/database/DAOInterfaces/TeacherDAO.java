@@ -1,4 +1,4 @@
-package lv.activestudio.java2.database.dao;
+package lv.activestudio.java2.database.DAOInterfaces;
 
 import lv.activestudio.java2.domain.Teacher;
 

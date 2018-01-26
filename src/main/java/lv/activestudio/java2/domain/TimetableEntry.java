@@ -4,62 +4,70 @@ import java.time.LocalTime;
 
 public class TimetableEntry {
 
-    private Long classId; //TODO: TrainingClass Object?
-    private Long roomId;  //TODO: Room Object?
-    private int datOfWeek; //TODO: try using ChoiceFormat to format the day of the week
+    private long entryId;
+    private long classId;
+    private long teacherId;
+    private int dayOfWeek; //TODO: try using ChoiceFormat to format the day of the week
     private LocalTime startTime;
     private LocalTime endTime;
 
     @Override
     public String toString() {
         return "TimetableEntry{" +
-                "classId=" + classId +
-                ", roomId=" + roomId +
-                ", datOfWeek=" + datOfWeek +
+                "entryId=" + entryId +
+                ", classId=" + classId +
+                ", teacherId=" + teacherId +
+                ", dayOfWeek=" + dayOfWeek +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 '}';
     }
 
-    //TODO: consider overriding hashCode and equals
-
-    public void setClassId(Long classId) {
-        this.classId = classId;
+    public long getEntryId() {
+        return entryId;
     }
 
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
+    public void setEntryId(long entryId) {
+        this.entryId = entryId;
     }
 
-    public void setDatOfWeek(int datOfWeek) {
-        this.datOfWeek = datOfWeek;
-    }
-
-    public void setStartTime(LocalTime startTime) {
-        this.startTime = startTime;
-    }
-
-    public void setEndTime(LocalTime endTime) {
-        this.endTime = endTime;
-    }
-
-    public Long getClassId() {
+    public long getClassId() {
         return classId;
     }
 
-    public Long getRoomId() {
-        return roomId;
+    public void setClassId(long classId) {
+        this.classId = classId;
     }
 
-    public int getDatOfWeek() {
-        return datOfWeek;
+    public long getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(long teacherId) {
+        this.teacherId = teacherId;
+    }
+
+    public int getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public void setDayOfWeek(int dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
     }
 
     public LocalTime getStartTime() {
         return startTime;
     }
 
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
     public LocalTime getEndTime() {
         return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
     }
 }

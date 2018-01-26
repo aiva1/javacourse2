@@ -3,7 +3,7 @@ package lv.activestudio.java2.businesslogic.impl.remove;
 import lv.activestudio.java2.businesslogic.RemoveTeacherService;
 import lv.activestudio.java2.businesslogic.api.remove.RemoveTeacherRequest;
 import lv.activestudio.java2.businesslogic.api.remove.RemoveTeacherResponse;
-import lv.activestudio.java2.database.dao.TeacherDAO;
+import lv.activestudio.java2.database.DAOInterfaces.TeacherDAO;
 
 public class RemoveTeacherServiceImpl implements RemoveTeacherService {
 

@@ -3,7 +3,7 @@ package lv.activestudio.java2.businesslogic.impl.remove;
 import lv.activestudio.java2.businesslogic.RemoveTimetableEntryService;
 import lv.activestudio.java2.businesslogic.api.remove.RemoveTimetableEntryRequest;
 import lv.activestudio.java2.businesslogic.api.remove.RemoveTimetableEntryResponse;
-import lv.activestudio.java2.database.dao.TimetableEntryDAO;
+import lv.activestudio.java2.database.DAOInterfaces.TimetableEntryDAO;
 
 public class RemoveTimetableEntryServiceImpl implements RemoveTimetableEntryService {
 

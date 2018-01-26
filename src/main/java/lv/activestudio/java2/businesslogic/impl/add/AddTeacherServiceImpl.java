@@ -3,7 +3,7 @@ package lv.activestudio.java2.businesslogic.impl.add;
 import lv.activestudio.java2.businesslogic.AddTeacherService;
 import lv.activestudio.java2.businesslogic.api.add.AddTeacherRequest;
 import lv.activestudio.java2.businesslogic.api.add.AddTeacherResponse;
-import lv.activestudio.java2.database.dao.TeacherDAO;
+import lv.activestudio.java2.database.DAOInterfaces.TeacherDAO;
 import lv.activestudio.java2.domain.Teacher;
 import org.apache.log4j.Logger;
 

@@ -1,6 +1,6 @@
-package lv.activestudio.java2.database.orm;
+package lv.activestudio.java2.database.hibernate;
 
-import lv.activestudio.java2.database.dao.TimetableEntryDAO;
+import lv.activestudio.java2.database.DAOInterfaces.TimetableEntryDAO;
 import lv.activestudio.java2.domain.TimetableEntry;
 import org.apache.log4j.Logger;
 

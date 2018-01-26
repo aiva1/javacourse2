@@ -1,6 +1,6 @@
-package lv.activestudio.java2.database.orm;
+package lv.activestudio.java2.database.hibernate;
 
-import lv.activestudio.java2.database.dao.TeacherDAO;
+import lv.activestudio.java2.database.DAOInterfaces.TeacherDAO;
 import lv.activestudio.java2.domain.Teacher;
 import org.apache.log4j.Logger;
 

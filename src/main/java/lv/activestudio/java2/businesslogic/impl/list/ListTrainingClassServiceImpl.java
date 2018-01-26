@@ -2,7 +2,7 @@ package lv.activestudio.java2.businesslogic.impl.list;
 
 import lv.activestudio.java2.businesslogic.ListTrainingClassService;
 import lv.activestudio.java2.businesslogic.api.list.ListTrainingClassesResponse;
-import lv.activestudio.java2.database.dao.TrainingClassDAO;
+import lv.activestudio.java2.database.DAOInterfaces.TrainingClassDAO;
 
 public class ListTrainingClassServiceImpl implements ListTrainingClassService {
 
