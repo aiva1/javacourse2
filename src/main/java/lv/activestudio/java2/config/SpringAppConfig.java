@@ -78,6 +78,8 @@ public class SpringAppConfig {
         return sessionFactoryBean.getObject();
     }
 
+    //used for transactions. needed together with @EnableTransactionManager.
+    //also, add @Transactional into @Repository (DAOImpl)
     @Bean
     public PlatformTransactionManager transactionManager(SessionFactory sessionFactory) {
         return new HibernateTransactionManager(sessionFactory);

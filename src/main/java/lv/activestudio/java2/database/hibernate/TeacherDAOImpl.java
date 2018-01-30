@@ -3,10 +3,12 @@ package lv.activestudio.java2.database.hibernate;
 import lv.activestudio.java2.database.DAOInterfaces.TeacherDAO;
 import lv.activestudio.java2.domain.Teacher;
 import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -16,8 +18,9 @@ import java.util.Optional;
 /**
  * Implements the interface for accessing Teacher data (TEACHERS table)
  */
-@Component("teacherDAOImpl")
-//@Transactional
+//@Component("teacherDAOImpl")
+@Repository("teacherDAOImpl")
+@Transactional
 public class TeacherDAOImpl implements TeacherDAO {
 
     @Autowired
@@ -61,6 +64,14 @@ public class TeacherDAOImpl implements TeacherDAO {
     }
 
     private Session getCurrSession() {
-        return sessionFactory.getCurrentSession();
+        Session session;
+
+        try {
+           session = sessionFactory.getCurrentSession();
+        } catch (HibernateException e) {
+            session = sessionFactory.openSession();
+        }
+
+        return session;
     }
 }

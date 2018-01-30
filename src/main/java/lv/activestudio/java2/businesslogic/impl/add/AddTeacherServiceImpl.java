@@ -20,7 +20,7 @@ public class AddTeacherServiceImpl implements AddTeacherService {
     private TeacherDAO teacherDAO;
 
     @Override
-    //@Transactional(Transactional.TxType.REQUIRES_NEW)
+    @Transactional//(Transactional.TxType.REQUIRES_NEW)
     public AddTeacherResponse addTeacher(AddTeacherRequest request) {
         Teacher teacher = new Teacher();
         teacher.setFirstName(request.getFirstName());
