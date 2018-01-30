@@ -6,6 +6,7 @@ import lv.activestudio.java2.businesslogic.impl.add.AddTrainingClassServiceImpl;
 import lv.activestudio.java2.businesslogic.impl.add.AddTeacherServiceImpl;
 import lv.activestudio.java2.businesslogic.impl.list.ListTeacherServiceImpl;
 import lv.activestudio.java2.businesslogic.impl.remove.RemoveTeacherServiceImpl;
+import lv.activestudio.java2.config.SpringAppConfig;
 import lv.activestudio.java2.database.DAOInterfaces.TeacherDAO;
 import lv.activestudio.java2.database.DAOInterfaces.TimetableEntryDAO;
 import lv.activestudio.java2.database.DAOInterfaces.TrainingClassDAO;
@@ -16,6 +17,8 @@ import lv.activestudio.java2.ui.View;
 import lv.activestudio.java2.ui.impl.AddTeacherView;
 import lv.activestudio.java2.ui.impl.ListTeacherView;
 import lv.activestudio.java2.ui.impl.RemoveTeacherView;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,21 +28,24 @@ public class ActiveStudioApplication {
 
     public static void main(String[] args) {
 
-        TeacherDAO teacherDAO = new TeacherDAOImpl();
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
+
+
+        //TeacherDAO teacherDAO = new TeacherDAOImpl();
         TimetableEntryDAO timetableEntryDAO = new TimetableEntryDAOImpl();
         TrainingClassDAO trainingClassDAO = new TrainingClassDAOImpl();
 
-        AddTeacherService addTeacherService = new AddTeacherServiceImpl(teacherDAO);
-        ListTeacherService listTeacherService = new ListTeacherServiceImpl(teacherDAO);
-        RemoveTeacherService removeTeacherService = new RemoveTeacherServiceImpl(teacherDAO);
+        //AddTeacherService addTeacherService = new AddTeacherServiceImpl(teacherDAO);
+        //ListTeacherService listTeacherService = new ListTeacherServiceImpl(teacherDAO);
+        //RemoveTeacherService removeTeacherService = new RemoveTeacherServiceImpl(teacherDAO);
 
         AddTrainingClassService addTrainingClassService = new AddTrainingClassServiceImpl(trainingClassDAO);
         AddTimetableEntryService addTimetableEntryService = new AddTimetableEntryServiceImpl(timetableEntryDAO);
 
         Map<Integer, View> commands = new HashMap<>();
-        commands.put(1, new AddTeacherView(addTeacherService));
-        commands.put(2, new ListTeacherView(listTeacherService));
-        commands.put(3, new RemoveTeacherView(removeTeacherService));
+        commands.put(1, context.getBean(AddTeacherView.class));
+        //commands.put(2, new ListTeacherView(listTeacherService));
+        //commands.put(3, new RemoveTeacherView(removeTeacherService));
 
         while (true) {
             printProgramMenu();

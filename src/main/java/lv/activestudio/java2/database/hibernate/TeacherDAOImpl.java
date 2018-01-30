@@ -13,8 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Component("teacherDAO")
-@Transactional
+/**
+ * Implements the interface for accessing Teacher data (TEACHERS table)
+ */
+@Component("teacherDAOImpl")
+//@Transactional
 public class TeacherDAOImpl implements TeacherDAO {
 
     @Autowired
@@ -50,6 +53,8 @@ public class TeacherDAOImpl implements TeacherDAO {
     @Override
     public List<Teacher> getAll() {
         Logger.getRootLogger().debug("Retrieve all teachers from database");
+
+        //return new ArrayList<Teacher>();
         return getCurrSession()
                 .createCriteria(Teacher.class)
                 .list();

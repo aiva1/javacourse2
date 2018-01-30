@@ -1,11 +1,26 @@
 package lv.activestudio.java2.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "teachers")
 public class Teacher {
 
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @Column(name = "first_name", nullable = false)
     private String firstName;
+
+    @Column(name = "last_name", nullable = false)
     private String lastName;
+
+    @Column(name = "bio")
     private String bio;
+
+    @Column(name = "photo")
     private String photo;
 
     @Override
