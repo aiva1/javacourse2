@@ -36,14 +36,14 @@ public class TeacherDAOImpl implements TeacherDAO {
     @Override
     public Optional<Teacher> getById(Long id) {
         Logger.getRootLogger().debug("Get teacher by ID");
-        Teacher teacher = getCurrSession().get(Teacher.class, id);
+        Teacher teacher = (Teacher) getCurrSession().get(Teacher.class, id);
         return Optional.ofNullable(teacher);
     }
 
     @Override
     public Optional<Teacher> getByLastName(String lastName) {
         Logger.getRootLogger().debug("Get teacher by ID");
-        Teacher teacher = getCurrSession().get(Teacher.class, lastName);
+        Teacher teacher = (Teacher) getCurrSession().get(Teacher.class, lastName);
         return Optional.ofNullable(teacher);
     }
 
