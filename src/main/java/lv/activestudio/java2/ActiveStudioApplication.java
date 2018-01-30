@@ -1,22 +1,16 @@
 package lv.activestudio.java2;
 
-import lv.activestudio.java2.businesslogic.*;
-import lv.activestudio.java2.businesslogic.impl.add.AddTimetableEntryServiceImpl;
-import lv.activestudio.java2.businesslogic.impl.add.AddTrainingClassServiceImpl;
-import lv.activestudio.java2.businesslogic.impl.add.AddTeacherServiceImpl;
-import lv.activestudio.java2.businesslogic.impl.list.ListTeacherServiceImpl;
-import lv.activestudio.java2.businesslogic.impl.remove.RemoveTeacherServiceImpl;
+import lv.activestudio.java2.businesslogic.serviceimpl.AddTimetableEntryServiceImpl;
+import lv.activestudio.java2.businesslogic.serviceimpl.AddTrainingClassServiceImpl;
+import lv.activestudio.java2.businesslogic.serviceinterfaces.AddTimetableEntryService;
+import lv.activestudio.java2.businesslogic.serviceinterfaces.AddTrainingClassService;
 import lv.activestudio.java2.config.SpringAppConfig;
-import lv.activestudio.java2.database.DAOInterfaces.TeacherDAO;
 import lv.activestudio.java2.database.DAOInterfaces.TimetableEntryDAO;
 import lv.activestudio.java2.database.DAOInterfaces.TrainingClassDAO;
-import lv.activestudio.java2.database.hibernate.TeacherDAOImpl;
 import lv.activestudio.java2.database.hibernate.TimetableEntryDAOImpl;
 import lv.activestudio.java2.database.hibernate.TrainingClassDAOImpl;
 import lv.activestudio.java2.ui.View;
 import lv.activestudio.java2.ui.impl.AddTeacherView;
-import lv.activestudio.java2.ui.impl.ListTeacherView;
-import lv.activestudio.java2.ui.impl.RemoveTeacherView;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

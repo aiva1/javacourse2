@@ -1,7 +1,7 @@
 package lv.activestudio.java2.ui.impl;
 
-import lv.activestudio.java2.businesslogic.ListTeacherService;
-import lv.activestudio.java2.businesslogic.api.list.ListTeacherResponse;
+import lv.activestudio.java2.businesslogic.serviceinterfaces.ListTeacherService;
+import lv.activestudio.java2.businesslogic.reqresp.list.ListTeacherResponse;
 import lv.activestudio.java2.domain.Teacher;
 import lv.activestudio.java2.ui.View;
 import org.apache.log4j.Logger;

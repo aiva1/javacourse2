@@ -1,8 +1,7 @@
 package lv.activestudio.java2.ui.impl;
 
-import lv.activestudio.java2.businesslogic.AddTeacherService;
-import lv.activestudio.java2.businesslogic.api.add.AddTeacherRequest;
-import lv.activestudio.java2.businesslogic.api.add.AddTeacherResponse;
+import lv.activestudio.java2.businesslogic.serviceinterfaces.AddTeacherService;
+import lv.activestudio.java2.businesslogic.reqresp.add.AddTeacherRequest;
 import lv.activestudio.java2.ui.View;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

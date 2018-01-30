@@ -1,8 +1,8 @@
 package lv.activestudio.java2.ui.impl;
 
-import lv.activestudio.java2.businesslogic.RemoveTeacherService;
-import lv.activestudio.java2.businesslogic.api.remove.RemoveTeacherRequest;
-import lv.activestudio.java2.businesslogic.api.remove.RemoveTeacherResponse;
+import lv.activestudio.java2.businesslogic.serviceinterfaces.RemoveTeacherService;
+import lv.activestudio.java2.businesslogic.reqresp.remove.RemoveTeacherRequest;
+import lv.activestudio.java2.businesslogic.reqresp.remove.RemoveTeacherResponse;
 import lv.activestudio.java2.ui.View;
 import org.apache.log4j.Logger;
 
