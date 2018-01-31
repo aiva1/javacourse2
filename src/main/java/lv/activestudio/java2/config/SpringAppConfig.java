@@ -29,7 +29,6 @@ public class SpringAppConfig {
 
     private static final String DATABASE_PROPERTIES_FILE = "database.properties";
 
-
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();

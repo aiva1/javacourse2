@@ -20,9 +20,7 @@ import java.util.Map;
  */
 public class MVCDispatcherFilter implements Filter {
 
-
     private ApplicationContext appContext;
-
     private Map<String, MVCController> controllerMapping;
 
     @Override
