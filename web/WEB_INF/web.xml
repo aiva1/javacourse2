@@ -19,7 +19,7 @@
 
     <filter>
         <filter-name>MVCFilter</filter-name>
-        <filter-class>lv.activestudio.java2.mvc.MVCDispatcherFilter</filter-class>
+        <filter-class>lv.activestudio.java2.mvcnospringnospring.MVCDispatcherFilter</filter-class>
     </filter>
 
     <filter-mapping>

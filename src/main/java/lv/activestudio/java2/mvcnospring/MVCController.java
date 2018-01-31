@@ -1,4 +1,4 @@
-package lv.activestudio.java2.mvc;
+package lv.activestudio.java2.mvcnospring;
 
 import javax.servlet.http.HttpServletRequest;
 

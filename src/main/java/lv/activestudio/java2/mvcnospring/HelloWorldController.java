@@ -1,4 +1,4 @@
-package lv.activestudio.java2.mvc;
+package lv.activestudio.java2.mvcnospring;
 
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ public class HelloWorldController implements MVCController {
 
     @Override
     public MVCModel processGet(HttpServletRequest request) {
-        return new MVCModel("helloWorld.jsp", "GET method processed :)");
+        return new MVCModel("/helloWorld.jsp", "GET method processed :)");
     }
 
     @Override

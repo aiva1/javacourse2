@@ -1,4 +1,4 @@
-package lv.activestudio.java2.mvc;
+package lv.activestudio.java2.mvcnospring;
 
 public class MVCModel {
 

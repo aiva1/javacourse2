@@ -1,4 +1,4 @@
-package lv.activestudio.java2.mvc;
+package lv.activestudio.java2.mvcnospring;
 
 import lv.activestudio.java2.config.SpringAppConfig;
 import org.apache.log4j.Logger;
@@ -36,7 +36,6 @@ public class MVCDispatcherFilter implements Filter {
         controllerMapping = new HashMap<>();
         controllerMapping.put("/hello", getControllerBean(HelloWorldController.class));
     }
-
 
     private MVCController getControllerBean(Class beanClass) {
         return (MVCController) appContext.getBean(beanClass);
