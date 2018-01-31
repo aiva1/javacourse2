@@ -66,11 +66,11 @@ public class TeacherDAOImpl implements TeacherDAO {
     private Session getCurrSession() {
         Session session;
 
-        try {
+//        try {
            session = sessionFactory.getCurrentSession();
-        } catch (HibernateException e) {
-            session = sessionFactory.openSession();
-        }
+//        } catch (HibernateException e) {
+//            session = sessionFactory.openSession();
+//        }
 
         return session;
     }

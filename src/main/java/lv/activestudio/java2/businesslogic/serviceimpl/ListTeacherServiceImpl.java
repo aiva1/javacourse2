@@ -8,10 +8,6 @@ public class ListTeacherServiceImpl implements ListTeacherService {
 
     private TeacherDAO teacherDAO;
 
-    public ListTeacherServiceImpl(TeacherDAO teacherDAO) {
-        this.teacherDAO = teacherDAO;
-    }
-
     @Override
     public ListTeacherResponse getTeachers() {
         return new ListTeacherResponse(teacherDAO.getAll());
